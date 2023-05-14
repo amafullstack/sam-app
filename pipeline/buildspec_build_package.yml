@@ -16,7 +16,7 @@ phases:
       - sam package --region ${TESTING_REGION} 
                     --output-template-file packaged-test.yaml 
       - . ./assume-role.sh ${PROD_PIPELINE_EXECUTION_ROLE} prod-package
-      - sam package --region ${PROD_REGION}
+      - sam package --region ${PROD_REGION} 
                     --output-template-file packaged-prod.yaml 
 artifacts:
   files:
